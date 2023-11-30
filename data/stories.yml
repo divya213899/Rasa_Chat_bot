@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+
+
+- story: GeekforGeek story 
+  steps:
+  - intent: greet
+  - action: utter_askname
+  - intent: user_name
+  - slot_was_set:
+    - name: "YOURNAME"
+  - action: utter_askemail
+  - slot_was_set:
+    - email: 'abc@gmail.com'
+  - intent: email_id
+  - action: action_email
